@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.time-line-container {
+    max-width: 1168px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #151515;
+    color: white;
+    font-family: "Inter", sans-serif;
+    /* Ensure a positioned context for the pseudo-element */
+}
+
+.timeline-card {
+    display: flex;
+    padding: 20px;
+    /* Add padding to the cards for spacing */
+}
+
+.timeline-card-2 {
+    text-align: end;
+}
+
+.timeline-card .timeline-image,
+.time-line-card-content {
+    width: 50%;
+    position: relative;
+}
+
+.time-line-card-content p {
+    color: #d0d0d0;
+    font-size: 20px;
+    line-height: 38px;
+}
+
+.time-line-card-content div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+
+}
+
+.timeline-card .timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.time-line-container::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    border-left: 2px dashed #E01B25;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.step-one::before {
+    content: "1";
+}
+
+.step-two::before {
+    content: "2";
+}
+
+.step-three::before {
+    content: "3";
+}
+
+.step-four::before {
+    content: "4";
+}
+
+.step-five::before {
+    content: "5";
+}
+
+.step::before {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: #E01B25;
+    left: -3%;
+    top: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+
+.step-right::before {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: #E01B25;
+    right: -2.5%;
+    top: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 0px) and (max-width : 520px) {
+    .timeline-card {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding: 20px 20px 20px 34px;
+        /* Add padding to the cards for spacing */
+    }
+
+    .timeline-card-2 {
+        flex-direction: column;
+        text-align: start;
+    }
+
+    .timeline-card .timeline-image,
+    .time-line-card-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .time-line-container::after {
+        width: 4px;
+        height: 90%;
+        top: 0;
+        left: 14px;
+    }
+
+    .step::before {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: #E01B25;
+        left: -10%;
+        top: 30px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+
+
+    .step-right::before {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: #E01B25;
+        left: -10%;
+        top: 30px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
